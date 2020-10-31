@@ -27,7 +27,7 @@ Week 8: Debug and Assess\
 •	Ask course staff if results are satisfactory
 
 Week 9: Debug and Assess\
-•	Conduct formal write up\ 
+•	Conduct formal write up\
 •	Complete project
 
 
