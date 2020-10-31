@@ -7,7 +7,7 @@ The aim of this project is to enable RF based non-invasive monitoring of an indi
 Week 5: Hardware setup\
 •	Attain hardware, install software, read documentation\
 •	Assign roles and responsibilities for team members\
-•	Initial setup, trouble shooting and problem framing\ 
+•	Initial setup, trouble shooting and problem framing\
 
 Week 6: Data Collection\
 •	Initial testing and data collection\
