@@ -4,5 +4,10 @@ The aim of this project is to enable RF based non-invasive monitoring of an indi
 
 ## Project Timeline
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Week 5: Radio Setup 
+Week 6: Data Collection and Inference
+Week 7: Signal Processing Algorithm Design 
+Week 8: ML based Algorithm Design
+Week 9: Comparison and Testing
+Week 10: Explore Improvements
 
