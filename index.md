@@ -7,24 +7,24 @@ The aim of this project is to enable RF based non-invasive monitoring of an indi
 Week 5: Hardware setup\
 •	Attain hardware, install software, read documentation\
 •	Assign roles and responsibilities for team members\
-•	Initial setup, trouble shooting and problem framing\
+•	Initial setup, trouble shooting and problem framing
 
 Week 6: Data Collection\
 •	Initial testing and data collection\
 •	Paper survey and paper review for identification of relevant algorithms and techniques\
 •	Start coding and implementing\
 •	Decide on ML or classical approach\
-•	Check in with course staff about progress\
+•	Check in with course staff about progress
 
 Week 7: Formalization of approach\
 •	Continue coding and implementing\
 •	Last date to change approach if necessary\
-•	Show results to course staff\
+•	Show results to course staff
 
 Week 8: Debug and Assess\
 •	Determine whether system can accuarately estimate respiratory rate\
 •	Review progress and modulate approach accordingly\
-•	Ask course staff if results are satisfactory\
+•	Ask course staff if results are satisfactory
 
 Week 9: Debug and Assess\
 •	Conduct formal write up\ 
