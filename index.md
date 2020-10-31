@@ -1,37 +1,8 @@
-## Welcome to GitHub Pages
+## Abstract
 
-You can use the [editor on GitHub](https://github.com/isuparnopal/respiration_monitoring.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+The aim of this project is to enable RF based non-invasive monitoring of an individual's respiration rate. The system is designed around the Pluto SDR (Analog Devices) - controlled using GNU Radio. We transmit a 2.4 GHz signal (Wifi band), which passes through an individuals body, and is received by a receiver at the other end. We aim to study the baseband I and Q signals - applying both machine learning and signal processing based approaches to the collected data, to accurately estimate respiratory rate from the recieved signal. This approach can potentially enable passive monitoring of respiration rate of individals at homes/offices which is valuable in COVID-19 monitoring. It can also be expanded to social distancing/localization applications.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
+## Project Timeline
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/isuparnopal/respiration_monitoring.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
