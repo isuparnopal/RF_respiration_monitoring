@@ -9,5 +9,5 @@ Week 6: Data Collection and Inference\
 Week 7: Signal Processing Algorithm Design\ 
 Week 8: ML based Algorithm Design\
 Week 9: Comparison and Testing\
-Week 10: Explore Improvements\
+Week 10: Explore Improvements
 
