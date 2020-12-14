@@ -1,4 +1,3 @@
-
 ## RF Based Respiration Monitoring
 
 <!-- TABLE OF CONTENTS -->
