@@ -10,8 +10,8 @@ Website URL:
     <li>
       <a href="#Overall Project Goals">Overall Project Goals</a>
       <ul>
-        <li><a href="#Abstract">Abstract</a></li>
-        <li><a href="#Current Work">Current Work</a></li>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#current-work">Current Work</a></li>
       </ul>
     </li>
     <li>
