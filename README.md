@@ -8,9 +8,10 @@ Website URL:
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#Overall Project Goals">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#Abstract">Built With</a></li>
+        <li><a href="#Current Work">Installation</a></li>
       </ul>
     </li>
     <li>
@@ -38,7 +39,7 @@ Website URL:
 
 Respiratory rate (the number of breaths you take per minute) is an important physiological indicator of a person's health. It is regularly used in monitoring health conditions such as sleep apnea, chronic obstructive pulmonary disease and asthama. Additionally, in the current environment of COVID-19 - a respiratory virus infection, respiratory rate is one of the most important vital signs that is monitored in patients. Currently, there are well developed methods for monitoring respiratory rate in clinical settings, such as by using a respiratory chest band. However, these methods involve placing instruments on the body and do not lend themselves well to applications involving continous and remote monitoring of respiratory rate. The purpose of this project is to demonstrate non-invasive and passive monitoring of respiratory rate using RF signals. By using a 2.4 GHz RF carrier signal generated on a Pluto SDR - which lies in the WiFi frequency range, and a receiver, we study how transmitted message signals are modulated by a person's respiration and extract these respiration related features from the received baseband signal using filtering techniques. We develop a pipeline combining various signal processing approaches suggested in literature to estimate respiratory rate from these extracted features and finally, validate the accuracy of our measurements. 
 
-### Prior Work
+### Current Work
 
 
 
