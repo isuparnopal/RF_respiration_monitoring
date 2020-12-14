@@ -8,10 +8,10 @@ Website URL:
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#Overall Project Goals">About The Project</a>
+      <a href="#Overall Project Goals">Overall Project Goals</a>
       <ul>
-        <li><a href="#Abstract">Built With</a></li>
-        <li><a href="#Current Work">Installation</a></li>
+        <li><a href="#Abstract">Abstract</a></li>
+        <li><a href="#Current Work">Current Work</a></li>
       </ul>
     </li>
     <li>
