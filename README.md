@@ -70,7 +70,7 @@ where m(t) represents the respiration signal that modulates the transmitted RF s
 
 ### Extracting the Respiration Signal
 
-The main objective at the Pluto receiver is to extract this respiration signal m(t) from the demodulated baseband signal. Pluto provides access to the the in-phase(I) and quadrature (Q) components of the received baseband signal which are processed through a configureable quadrature demodulator and baseband processing block located inside the Pluto hardware. We configure our TX-RX pair with a baseband sampling rate of 1 Msps and a gain of 15 dB which was experimentally found to be sensitive enough to discern the effects of amplitude modulation on our received signal, while still maintaining the noise floor at acceptably low levels.  
+The main objective at the Pluto receiver is to extract this respiration signal m(t) from the demodulated baseband signal. Pluto provides access to the the in-phase (I) and quadrature (Q) components of the received baseband signal which are processed through a configureable quadrature demodulator and baseband processing block located inside the Pluto hardware. We configure our TX-RX pair with a baseband sampling rate of 1 Msps and a gain of 15 dB which was experimentally found to be sensitive enough to discern the effects of amplitude modulation on our received signal, while still maintaining the noise floor at acceptably low levels.  
   
 The amplitude of the baseband signal is obtained from the I and Q components of the demodulated signal, using the formula below:
 
