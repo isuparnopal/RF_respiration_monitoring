@@ -75,7 +75,7 @@ The main objective at the Pluto receiver is to extract this respiration signal m
 The amplitude of the baseband signal is obtained from the I and Q components of the demodulated signal, using the formula below:
 
 <p align="center">
-![CodeCogsEqn](https://user-images.githubusercontent.com/73725580/102161731-b294fb00-3e3c-11eb-96da-547908a7e381.gif)
+<img width="136" alt="Screenshot 2020-12-14 at 6 48 44 PM" src="https://user-images.githubusercontent.com/73725580/102161900-0b649380-3e3d-11eb-93ee-cfd25ad582f4.png">
 </p>
 
 
