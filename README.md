@@ -78,6 +78,15 @@ The amplitude of the baseband signal is obtained from the I and Q components of 
 <img width="136" alt="Screenshot 2020-12-14 at 6 48 44 PM" src="https://user-images.githubusercontent.com/73725580/102161900-0b649380-3e3d-11eb-93ee-cfd25ad582f4.png">
 </p>
 
+The spectrum of the received baseband signal is shown below:
+
+<p align="center">
+<img width="1920" alt="Baseband Signal Spectrum" src="https://user-images.githubusercontent.com/73725580/102162211-a3627d00-3e3d-11eb-8ca6-17aabfc182c5.png">
+**Spectrum of Baseband Signal**
+</p>
+
+
+
 
 
 
