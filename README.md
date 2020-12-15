@@ -63,10 +63,10 @@ Acos(2πf<sub>c</sub>t)
 where A is the amplitude of the transmitted signal and f<sub>c</sub> is the frequency of the 2.4 GHz carrier signal. The transmitted signal is reflected from the user's body and chest movements caused due to respiration alter the magnitude of the reflected signal, presenting as an amplitude modulation of the transmitted signal. The amplitude modulated signal can be represented as:
 
 <p align="center">
-Am(t)cos(2πf<sub>c</sub>t)
+Ar(t)cos(2πf<sub>c</sub>t)
 </p>
 
-where m(t) represents the respiration signal that modulates the transmitted RF signal. This signal is received at the Pluto receiver.
+where r(t) represents the respiration signal that modulates the transmitted RF signal. This signal is received at the Pluto receiver.
 
 ### Extracting the Respiration Signal
 
@@ -78,19 +78,29 @@ The amplitude of the baseband signal is reconstructed from the I and Q component
 <img width="136" alt="Screenshot 2020-12-14 at 6 48 44 PM" src="https://user-images.githubusercontent.com/73725580/102161900-0b649380-3e3d-11eb-93ee-cfd25ad582f4.png">
 </p>
 
-The spectrum of the received baseband signal is shown below.
+The spectrum of the received baseband signal is shown below after filtering around our chosen baseband frequency.
 
 <p align="center">
 <img width="1920" alt="Baseband Signal Spectrum" src="https://user-images.githubusercontent.com/73725580/102162211-a3627d00-3e3d-11eb-8ca6-17aabfc182c5.png">
 Fig.1. Spectrum of Baseband Signal
 </p>
 
-The extracted amplitude of the baseband signal is plotted against time for a 30s window showing the amplitude modulation effect of respiration.
+The extracted amplitude of this baseband signal is plotted against time using a Simulink time scope for a 30s window and it shows the amplitude modulation effect of respiration.
 
 <p align="center">
 <img width="1920" alt="Baseband Signal Time" src="https://user-images.githubusercontent.com/73725580/102162568-3e5b5700-3e3e-11eb-973f-057bdffe7a24.png">
 Fig.2. Amplitude of Baseband Signal vs. Time 
 </p>
+
+The above steps are all accomplished by designing filtering and mathematical blocks in Simulink, in conjunction with the RX model of Pluto.  
+
+As the signal above is modulated by respiration, extracting its envelope will provide a good approximation of the respiration signal r(t). We have thus designed an envelope detector in simulink by squaring the signal and further downsampling it from 1 Msps to 200 Hz. This is sufficient as the normal range of respiration in humans is between 0.2 to 0.5 Hz. We further low pass filter the signal to eliminate the high frequency energy and the square root of the resultant signal provides us with the desired envelope. The envelope data and sampling times are transferred to a MATLAB workspace for post processing to estimate respiratry rate.
+
+### Estimating Respiratory Rate
+
+
+
+
 
 
 
