@@ -48,7 +48,7 @@ Current methods to monitor respiratory rate using wireless signals typcially exp
 
 ### System Modelling
 
-The approach we have chosen to pursue involves studying the amplitude related changes of a transmitted message signal due to a person's respiration, as proposed in WiBreathe [1]. The system is modelled as shown below:  
+The approach we have chosen to pursue involves studying the amplitude related changes of a transmitted message signal due to a person's respiration, as proposed in WiBreathe [1]. The system is modelled as shown below.  
 
 
 
@@ -78,7 +78,7 @@ The amplitude of the baseband signal is reconstructed from the I and Q component
 <img width="136" alt="Screenshot 2020-12-14 at 6 48 44 PM" src="https://user-images.githubusercontent.com/73725580/102161900-0b649380-3e3d-11eb-93ee-cfd25ad582f4.png">
 </p>
 
-The spectrum of the received baseband signal is shown below after filtering around our chosen baseband frequency.
+The spectrum of the demodulated signal is shown below after filtering around our chosen baseband frequency.
 
 <p align="center">
 <img width="1920" alt="Baseband Signal Spectrum" src="https://user-images.githubusercontent.com/73725580/102162211-a3627d00-3e3d-11eb-8ca6-17aabfc182c5.png">
@@ -95,6 +95,13 @@ Fig.2. Amplitude of Baseband Signal vs. Time
 The above steps are all accomplished by designing filtering and mathematical blocks in Simulink, in conjunction with the RX model of Pluto.  
 
 As the signal above is modulated by respiration, extracting its envelope will provide a good approximation of the respiration signal r(t). We have thus designed an envelope detector in simulink by squaring the signal and further downsampling it from 1 Msps to 200 Hz. This is sufficient as the normal range of respiration in humans is between 0.2 to 0.5 Hz. We further low pass filter the signal to eliminate the high frequency energy and the square root of the resultant signal provides us with the desired envelope. The envelope data and sampling times are transferred to a MATLAB workspace for post processing to estimate respiratry rate.
+
+The figure below shows the real-time extracted envelope plotted against time using a Simulink time scope for a 30s window. The initial peaking in the envelope is caused because the envelope detector takes some time to stabilize. We do not consider these envelope samples in our processing script described in the following section. 
+
+<p align="center">
+<img width="1920" alt="Envelope" src="https://user-images.githubusercontent.com/73725580/102267874-5c24cc80-3ecf-11eb-9aa7-bef022a9b0ae.png">
+Fig.3. Extracted real-time envelope
+</p>
 
 ### Estimating Respiratory Rate
 
