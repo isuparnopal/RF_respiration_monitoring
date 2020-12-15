@@ -63,7 +63,7 @@ Acos(2πf<sub>c</sub>t)
 where A is the amplitude of the transmitted signal and f<sub>c</sub> is the frequency of the 2.4 GHz carrier signal. The transmitted signal is reflected from the user's body and chest movements caused due to respiration alter the magnitude of the reflected signal, presenting as an amplitude modulation of the transmitted signal. The amplitude modulated signal can be represented as:
 
 <p align="center">
-Ar(t)cos(2πf<sub>c</sub>t)
+r(t)Acos(2πf<sub>c</sub>t)
 </p>
 
 where r(t) represents the respiration signal that modulates the transmitted RF signal. This signal is received at the Pluto receiver.
@@ -104,6 +104,25 @@ Fig.3. Extracted real-time envelope
 </p>
 
 ### Estimating Respiratory Rate
+
+The envelope above contains information about the respiration signal r(t). However, it is also corrupted by reflections of the RF signal from nearby objects, minor movements in the user's body and interfering devices in the 2.4 GHz band. Therefore, to separate the respiration signal from these interferences, we apply the Variational Mode Decomposition (VMD) algorithm to decompose the signal into its various frequency modes, similar to that suggested in V2iFi[2]. The VMD algorithm decomposes the envelope into a number of signals around a central frequency with a narrow bandiwdth, and is implemented in MATLAB. Separating the envelope signal into its narrowband intrinsic mode functions (IMFs), we obtain the following modes: 
+
+<p align="center">
+<img width="1920" alt="VMD" src="https://user-images.githubusercontent.com/73725580/102282750-f09a2980-3ee5-11eb-9ff5-2769a29524a1.png">
+Fig.4. Intrinsic modes of the Envelope
+</p>
+
+The noisy envelope signal has been decomposed above to provide us with the respiration signal r(t) (IMF3), and various other noise components. To estimate the respiratory rate from this signal, we divide it into 30s windows and calculate the FFT of the 30s window signal. We select the peak frequency of this IMF as our respiratory rate, following a method similar to that suggested in WiBreathe [1]. The FFT of IMF3 is shown below, exhibiting a clear peak. The peak frequency of this IMF corresponds to a respiratory rate of 0.269 Hz or 16.14 breaths per minute.
+
+<p align="center">
+<img width="1451" alt="Screenshot 2020-12-15 at 3 22 02 PM" src="https://user-images.githubusercontent.com/73725580/102284685-7370b380-3ee9-11eb-9a62-60f83bcd4980.png">
+Fig.5. FFT of Respiration IMF
+</p>
+
+
+
+
+
 
 
 
