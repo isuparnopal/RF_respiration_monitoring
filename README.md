@@ -46,6 +46,8 @@ Current methods to monitor respiratory rate using wireless signals typcially exp
 
 ## Techical Approach
 
+### System Modelling
+
 The approach we have chosen to pursue involves studying the amplitude related changes of a transmitted message signal due to a person's respiration, as proposed in WiBreathe [1]. The system is modelled as shown below:  
 
 
@@ -55,10 +57,28 @@ The approach we have chosen to pursue involves studying the amplitude related ch
 A sinusoidal message signal, very close to baseband frequency, such as 5 kHz is continously transmitted on a 2.4 GHz carrier using an AM scheme on the Pluto SDR. As the frequency of the carrier signal is much higher than the message signal, the final transmitted signal can be approximated as:  
 
 <p align="center">
-A<sub>c</sub>cos(2πf<sub>c</sub>t)
+Acos(2πf<sub>c</sub>t)
 </p>
 
-where A<sub>c</sub> and f<sub>c</sub> are the amplitude and  frequency of the 2.4 GHz carrier signal. 
+where A is the amplitude of the transmitted signal and f<sub>c</sub> is the frequency of the 2.4 GHz carrier signal. The transmitted signal is reflected from the user's body and chest movements caused due to respiration alter the magnitude of the reflected signal, presenting as an amplitude modulation of the transmitted signal. The amplitude modulated signal can be represented as:
+
+<p align="center">
+Am(t)cos(2πf<sub>c</sub>t)
+</p>
+
+where m(t) represents the respiration signal that modulates the transmitted RF signal. This signal is received at the Pluto receiver.
+
+### Extracting the Respiration Signal
+
+The main objective at the Pluto receiver is to extract this respiration signal m(t) from the demodulated baseband signal. Pluto provides access to the the in-phase(I) and quadrature (Q) components of the received baseband signal which are processed through a configureable quadrature demodulator and baseband processing block located inside the Pluto hardware. We configure our TX-RX pair with a baseband sampling rate of 1 Msps and a gain of 15 dB which was experimentally found to be sensitive enough to discern the effects of amplitude modulation on our received signal, while still maintaining the noise floor at acceptably low levels.  
+  
+The amplitude of the baseband signal is obtained from the I and Q components of the demodulated signal, using the formula below:
+
+<p align="center">
+A = \sqrt{I^2 + Q^2}
+</p>
+
+
 
 
 
