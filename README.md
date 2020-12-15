@@ -54,7 +54,9 @@ The approach we have chosen to pursue involves studying the amplitude related ch
 
 A sinusoidal message signal, very close to baseband frequency, such as 5 kHz is continously transmitted on a 2.4 GHz carrier using an AM scheme on the Pluto SDR. As the frequency of the carrier signal is much higher than the message signal, the final transmitted signal can be approximated as:  
 
-<center>A<sub>c</sub>cos(2πf<sub>c</sub>t) </center>  
+<p align="center">
+A<sub>c</sub>cos(2πf<sub>c</sub>t)
+</p>
 
 where A<sub>c</sub> and f<sub>c</sub> are the amplitude and  frequency of the 2.4 GHz carrier signal. 
 
