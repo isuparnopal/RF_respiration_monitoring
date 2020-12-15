@@ -72,17 +72,24 @@ where m(t) represents the respiration signal that modulates the transmitted RF s
 
 The main objective at the Pluto receiver is to extract this respiration signal m(t) from the demodulated baseband signal. Pluto provides access to the the in-phase (I) and quadrature (Q) components of the received baseband signal which are processed through a configureable quadrature demodulator and baseband processing block located inside the Pluto hardware. We configure our TX-RX pair with a baseband sampling rate of 1 Msps and a gain of 15 dB which was experimentally found to be sensitive enough to discern the effects of amplitude modulation on our received signal, while still maintaining the noise floor at acceptably low levels.  
   
-The amplitude of the baseband signal is obtained from the I and Q components of the demodulated signal, using the formula below:
+The amplitude of the baseband signal is reconstructed from the I and Q components of the demodulated signal, using the formula below:
 
 <p align="center">
 <img width="136" alt="Screenshot 2020-12-14 at 6 48 44 PM" src="https://user-images.githubusercontent.com/73725580/102161900-0b649380-3e3d-11eb-93ee-cfd25ad582f4.png">
 </p>
 
-The spectrum of the received baseband signal is shown below:
+The spectrum of the received baseband signal is shown below.
 
 <p align="center">
 <img width="1920" alt="Baseband Signal Spectrum" src="https://user-images.githubusercontent.com/73725580/102162211-a3627d00-3e3d-11eb-8ca6-17aabfc182c5.png">
-**Spectrum of Baseband Signal**
+Fig.1. Spectrum of Baseband Signal
+</p>
+
+The extracted amplitude of the baseband signal is plotted against time for a 30s window showing the amplitude modulation effect of respiration.
+
+<p align="center">
+<img width="1920" alt="Baseband Signal Time" src="https://user-images.githubusercontent.com/73725580/102162568-3e5b5700-3e3e-11eb-973f-057bdffe7a24.png">
+Fig.2. Amplitude of Baseband Signal vs. Time 
 </p>
 
 
