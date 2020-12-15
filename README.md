@@ -98,7 +98,7 @@ As the signal above is modulated by respiration, extracting its envelope will pr
 
 <p align="center">
 <img width="1181" alt="Screenshot 2020-12-15 at 3 44 44 PM" src="https://user-images.githubusercontent.com/73725580/102286270-d44dbb00-3eec-11eb-8cc1-8558335a2e4f.png">
-Fig.3. Simulink Processing Blocks
+Fig.3. Simulink Processing Block
 </p>
 
 The figure below shows the real-time extracted envelope plotted against time using a Simulink time scope for a 30s window. The initial peaking in the envelope is caused because the envelope detector takes some time to stabilize. We do not consider these envelope samples in our processing script described in the following section. 
