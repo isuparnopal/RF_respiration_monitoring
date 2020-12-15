@@ -46,7 +46,11 @@ Current methods to monitor respiratory rate using wireless signals typcially exp
 
 ## Techical Approach
 
-The approach we have chosen to pursue involves studying the amplitude related changes of a transmitted message signal due to a person's respiration, as proposed in WiBreathe [1].
+The approach we have chosen to pursue involves studying the amplitude related changes of a transmitted message signal due to a person's respiration, as proposed in WiBreathe [1]. The system is modelled as shown below:  
+
+
+
+
 
 
 
