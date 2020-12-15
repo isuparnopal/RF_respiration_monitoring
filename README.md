@@ -94,7 +94,7 @@ Fig.2. Amplitude of Baseband Signal vs. Time
 
 The above steps are all accomplished by designing filtering and mathematical blocks in Simulink, in conjunction with the RX model of Pluto.  
 
-As the signal above is modulated by respiration, extracting its envelope will provide a good approximation of the respiration signal r(t). We have thus designed an envelope detector in simulink by squaring the signal and further downsampling it from 1 Msps to 200 Hz. This is sufficient as the normal range of respiration in humans is between 0.2 to 0.5 Hz. We further low pass filter the signal to eliminate the high frequency energy and the square root of the resultant signal provides us with the desired envelope. The envelope data and sampling times are transferred to a MATLAB workspace for post processing to estimate respiratry rate.
+As the signal above is modulated by respiration, extracting its envelope will provide a good approximation of the respiration signal r(t). We have thus designed an envelope detector in simulink by squaring the signal and further downsampling it from 1 Msps to 200 Hz. This is sufficient as the normal range of respiration in humans is between 0.16 to 0.6 Hz [2]. We further low pass filter the signal to eliminate the high frequency energy and the square root of the resultant signal provides us with the desired envelope. The envelope data and sampling times are transferred to a MATLAB workspace for post processing to estimate respiratry rate.
 
 The figure below shows the real-time extracted envelope plotted against time using a Simulink time scope for a 30s window. The initial peaking in the envelope is caused because the envelope detector takes some time to stabilize. We do not consider these envelope samples in our processing script described in the following section. 
 
@@ -112,7 +112,7 @@ The envelope above contains information about the respiration signal r(t). Howev
 Fig.4. Intrinsic modes of the Envelope
 </p>
 
-The noisy envelope signal has been decomposed above to provide us with the respiration signal r(t) (IMF3), and various other noise components. To estimate the respiratory rate from this signal, we divide it into 30s windows and calculate the FFT of the 30s window signal. We select the peak frequency of this IMF as our respiratory rate, following a method similar to that suggested in WiBreathe [1]. The FFT of IMF3 is shown below, exhibiting a clear peak. The peak frequency of this IMF corresponds to a respiratory rate of 0.269 Hz or 16.14 breaths per minute.
+The noisy envelope signal has been decomposed above to provide us with the respiration signal r(t) (IMF3), and various other noise components - verified by taking FFT's of each of the IMF's and checking whether they lie in the human respiration frequency band between 0.16 to 0.6 Hz. To estimate the respiratory rate from this signal, we divide it into 30s windows and calculate the FFT of the 30s window signal. We select the peak frequency of this IMF as our respiratory rate, following a method similar to that suggested in WiBreathe [1]. The FFT of IMF3 is shown below, exhibiting a clear peak. The peak frequency of this IMF corresponds to a respiratory rate of 0.269 Hz or 16.14 breaths per minute.
 
 <p align="center">
 <img width="1451" alt="Screenshot 2020-12-15 at 3 22 02 PM" src="https://user-images.githubusercontent.com/73725580/102284685-7370b380-3ee9-11eb-9a62-60f83bcd4980.png">
