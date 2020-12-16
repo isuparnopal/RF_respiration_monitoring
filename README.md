@@ -143,6 +143,10 @@ Although this method seemed promising, it was discontinued due to problems of un
 ## Evaluation
 
 ### Experimental Setup
+Experimental setup is a key portion of any scientific study. It is important to main a clean set up without and variations to ensure that all results are accurate and repeatable. In this investigation two different setups were used: single radio setup and two radio fresnal zone setup.
+
+In the single radio set up a pluto SDR was kept 45 cm from the users chest. Breathing is monitored via amplitude modulation as described in the Extracting the Respiration Signal section for a period of 30 seconds. Concurrently, the number of breaths that the user takes is counted manually. At the end the counted number of breaths and the respritory rate determined by our algorithm is compared to determine if we have accurately messured the respritory rate.
+
 
 ### Results
 
