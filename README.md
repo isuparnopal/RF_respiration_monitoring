@@ -126,7 +126,15 @@ Fig.6. FFT of Respiration IMF
 
 ### Attempted but Discontinued Approaches
 
-An attempt was made to estimate respiratory rate using other methods suggested in literature based on Received Signal Strength (RSS) and phase modulation. The RSS based method was found to provide too low a sensitivity to differentiate between respiratory signals through experimental evaluation in our application.
+Attempts were made to estimate respiratory rate using other methods suggested in literature such as Received Signal Strength (RSS) and phase modulation. The RSS based method was found to provide too low a sensitivity to differentiate between respiratory signals through experimental evaluation in our application. For the phase based method, the phase of the baseband signal was deconstructed from the I and Q components through the arctan of Q/I in Simulink. The phase based method relies on the change in phase between the transmitted and received signal caused due to the chest movements associated with respiration. The change in phase ϕ(t) between transmitted and received RF signal of wavelength λ, for varying distances d(t) is related as [3]:
+
+<p align="center">
+<img width="151" alt="Screenshot 2020-12-15 at 8 11 39 PM" src="https://user-images.githubusercontent.com/73725580/102304228-d37b5000-3f11-11eb-9508-201c89d542d9.png">
+</p>
+
+
+
+
 
 
 
