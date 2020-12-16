@@ -124,11 +124,7 @@ The noisy envelope signal has been decomposed above to provide us with the respi
 Fig.6. FFT of Respiration IMF
 </p>
 
-Alternatively, another approach to estimate respiratory rate from IMF3 in the time domain is through the method of peaksearch. In this technique, we observe a 30s window of the IMF. Using MATLAB's internal function 'findpeaks' and specifying a minimm threshold separation of 1s (less than corresponding to 0.6 Hz), we observe the following peaks:
-
-
-
-Respiratory rate is then estimated by taking the average of horizontal distance of consecutive peaks, dividing it by our sampling frequency of 200 Hz, and multiplying by 60. The estimated respiratory rate using this method for our example is
+Alternatively, another approach to estimate respiratory rate from IMF3 in the time domain is through the method of peaksearch. In this technique, we observe a 30s window of the above IMF3. Using MATLAB's internal function 'findpeaks' and specifying a minimm threshold separation of 1s (less than the period corresponding to 0.6 Hz), respiratory rate is estimated by taking the average of horizontal distance of consecutive peaks, dividing it by our sampling frequency of 200 Hz, and multiplying by 60. The estimated respiratory rate using this method for our example is 
 
 
 ### Attempted but Discontinued Approaches
