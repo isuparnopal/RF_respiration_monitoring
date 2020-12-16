@@ -117,12 +117,19 @@ The envelope above contains information about the respiration signal r(t). Howev
 Fig.5. Intrinsic modes of the Envelope
 </p>
 
-The noisy envelope signal has been decomposed above to provide us with the respiration signal r(t) (IMF3), and various other noise components - verified by taking FFT's of each of the IMF's and checking whether they lie in the human respiration frequency band between 0.16 to 0.6 Hz. To estimate the respiratory rate from this signal, we divide it into 30s windows and calculate the FFT of the 30s window signal. We select the peak frequency of this IMF as our respiratory rate, following a method similar to that suggested in WiBreathe [1]. The FFT of IMF3 is shown below, exhibiting a clear peak. The peak frequency of this IMF corresponds to a respiratory rate of 0.269 Hz or 16.14 breaths per minute.
+The noisy envelope signal has been decomposed above to provide us with the respiration signal r(t) (IMF3), and various other noise components - verified by taking FFT's of each of the IMF's and checking whether they lie in the human respiration frequency band between 0.16 to 0.6 Hz. To estimate the respiratory rate from this signal, we divide it into 30s windows and calculate the FFT of the 30s window signal. We select the peak frequency of this IMF in the range of 0.16 to 0.6 Hz as our respiratory rate, following a method similar to that suggested in WiBreathe [1]. The FFT of IMF3 is shown below, exhibiting a clear peak. The peak frequency of this IMF corresponds to a respiratory rate of 0.269 Hz or 16.14 breaths per minute.
 
 <p align="center">
 <img width="1451" alt="Screenshot 2020-12-15 at 3 22 02 PM" src="https://user-images.githubusercontent.com/73725580/102284685-7370b380-3ee9-11eb-9a62-60f83bcd4980.png">
 Fig.6. FFT of Respiration IMF
 </p>
+
+Alternatively, another approach to estimate respiratory rate from IMF3 in the time domain is through the method of peaksearch. In this technique, we observe a 30s window of the IMF. Using MATLAB's internal function 'findpeaks' and specifying a minimm threshold separation of 1s (less than corresponding to 0.6 Hz), we observe the following peaks:
+
+
+
+Respiratory rate is then estimated by taking the average of horizontal distance of consecutive peaks, dividing it by our sampling frequency of 200 Hz, and multiplying by 60. The estimated respiratory rate using this method for our example is
+
 
 ### Attempted but Discontinued Approaches
 
@@ -131,6 +138,30 @@ Attempts were made to estimate respiratory rate using other methods suggested in
 <p align="center">
 <img width="151" alt="Screenshot 2020-12-15 at 8 11 39 PM" src="https://user-images.githubusercontent.com/73725580/102304228-d37b5000-3f11-11eb-9508-201c89d542d9.png">
 </p>
+
+Although this method seemed promising, it was discontinued due to problems of uncertain phase noise and insufficient sensitivity to varying respiratory rates. 
+
+## Evaluation
+
+### Experimental Setup
+
+### Results
+
+
+## Strenghts and Weaknesses
+
+## Future Directions
+
+
+
+
+
+
+
+
+
+
+
 
 
 
