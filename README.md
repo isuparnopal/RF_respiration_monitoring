@@ -156,7 +156,7 @@ In the single radio set up a pluto SDR was kept 45 cm from the users chest. This
 Fig. 7. Single Radio Set Up
 </p>  
 
-In the two radio set up, an attempt was made to replicate the concept of Fresnel zones suggested in [4]. We placed two Pluto radios at a distance of appproximately 70cm apart, similar to the experiment suggested in the paper. Taking these two radio positions as our focii, concentric ellipses are approximately estimated using the formula from [4] shown below corresponding to our carrier wavelength of 12.5 cm (2.4 GHz).
+In the two radio set up, an attempt was made to replicate the concept of Fresnel zones suggested in [4]. We placed two Pluto radios at a distance of appproximately 140 cm apart. Taking these two radio positions as our focii, concentric ellipses are approximately estimated using the formula from [4] shown below corresponding to our carrier wavelength of 12.5 cm (2.4 GHz).
 
 <p align="center">
 <img width="457" alt="Screenshot 2020-12-16 at 9 28 03 PM" src="https://user-images.githubusercontent.com/73725580/102447808-a4361300-3fe5-11eb-9472-b572b3f8429b.png">
@@ -173,6 +173,15 @@ Fig. 8. Attempted Two Radio Set Up
 </p> 
 
 ### Results
+
+Using the experimental technique described above for a single radio set up, respiratory rate of a subject was estimated using our algorithm by purposely varying respiratory rate between 9 breaths per minute to 22 breaths per minute. We collect 30 seconds of the user's breathing data and feed it into our algorithm. The table below lists the results obtained.
+
+
+
+
+
+
+
 
 ## Strenghts and Weaknesses
 The single radio set up clearly delivered the best results. The experimental set up was clean, accirate and easy to repeate. From the results section it is easy to see that this implementation delivered accurate and reliable respritory rate mesurements. Our use of both FFT and peak detection offers innovative algorithm to determine the respiritory rates to a high degree of accuracy. On the other hand our baseline could have been done more professionally than simply counting breaths. We ordered a breathing belt to help take these measurements but due to a delay in the shipping we were not able to use it. Further our implementation of the fresnel zones was not as successful as we expected and did not deliver all of the benefits promised in the Zhang, wang, Wu 2017 paper. Overall we are very pleased with the promissing results of the our project and belive that our implentation is an elegant solution.
