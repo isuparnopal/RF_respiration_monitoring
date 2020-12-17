@@ -176,6 +176,12 @@ Fig. 8. Attempted Two Radio Set Up
 
 Using the experimental technique described above for a single radio set up, respiratory rate of a subject was estimated using our algorithm by purposely varying respiratory rate between 9 breaths per minute to 22 breaths per minute. We collect 30 seconds of the user's breathing data and feed it into our algorithm. The table below lists the results obtained.
 
+<p align="center">
+<img width="792" alt="Screenshot 2020-12-16 at 10 58 32 PM" src="https://user-images.githubusercontent.com/73725580/102454127-5673d780-3ff2-11eb-92f9-1059d13bdb02.png">
+</p> 
+
+
+
 
 
 
