@@ -34,7 +34,7 @@ Website URL: https://isuparnopal.github.io/RF_respiration_monitoring/
     <li><a href="#future-directions">Future Directions</a></li>
     <li><a href="#references">References</a></li>
   </ol>
-</details>
+
 
 
 
