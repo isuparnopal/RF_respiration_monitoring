@@ -3,12 +3,7 @@
 UCLA ECE M202A Project, Fall 2020  
 Website URL: https://isuparnopal.github.io/RF_respiration_monitoring/
 
-<header class="page-header" role="banner">
-      <!-- <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1> -->
-      <h1 class="project-name">{{ default: site.title | page.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ default: site.description | page.description |  default: site.github.project_tagline }}</h2> 
       <a href="report.html" class="btn">Final Report</a>
-    </header>
 
 <!-- TABLE OF CONTENTS -->
 
