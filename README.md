@@ -41,9 +41,9 @@ Respiratory rate (the number of breaths you take per minute) is an important phy
 
 ### Current Work
 
-The research community is currently focused on the use of two different techniques for vital signs detection by means of RF signals: continuous wave (CW) radars and ultra-wideband(UWB) radars. UWB radars transmit short pulses with pulse duration of the order of nanoseconds. These type of radars, as well as CW radars, are able to detect the movement of a target by measuring the low-Doppler variation that affects the received backscattered signal. UWB radars also provide a range resolution that permits to eliminate the interfering pulses due to reflections of other targets in the field of view. CW radars are more simple systems than the UWB radars and the receiver is independent of the target distance.  Work has been done by Kaltiokallio et al. to extract breathing with very low error over a single TX/RX link [9]. Similarly, microwave sensors used in the frequency range of 2.42 GHz detect the I and Q components of the backscattered field due to breathing when placed directly above the user’s chest at a distance of 1m.
+The research community is currently focused on the use of two different techniques for vital signs detection by means of RF signals: continuous wave (CW) radars and ultra-wideband(UWB) radars. UWB radars transmit short pulses with pulse duration of the order of nanoseconds. These type of radars, as well as CW radars, are able to detect the movement of a target by measuring the low-Doppler variation that affects the received backscattered signal. UWB radars also provide a range resolution that permits to eliminate the interfering pulses due to reflections of other targets in the field of view. CW radars are more simple systems than the UWB radars and the receiver is independent of the target distance [5].  Work has been done by Kaltiokallio et al. to extract breathing with very low error over a single TX/RX link [6]. Similarly, microwave sensors used in the frequency range of 2.42 GHz detect the I and Q components of the backscattered field due to breathing when placed directly above the user’s chest at a distance of 1m.
 
-[1109.3898] shows experimentally that standard wireless networks which measure received signal strength (RSS) can also be used to reliably detect human breathing and estimate the respiratory rate. Additonally, techniques that exploit the amplitude modulation of a transmitted RF signal by respiration have also shown to accurately estimate respiratory rate [1]. Work done by [1109.3898] shows that beyond link amplitudes and network-wide frequency estimates, there is also information to be gathered in the phase of the sinusoidal signal due to the person’s breathing, in particular for links which have a high amplitude. [01629044] shows that if the heartbeat and breathing signals are to be monitored, demodulating the phase will then give a signal that is proportional to the chest-wall position that contains information about movement due to heartbeat and respiration. 
+[7] shows experimentally that standard wireless networks which measure received signal strength (RSS) can also be used to reliably detect human breathing and estimate the respiratory rate. Additonally, techniques that exploit the amplitude modulation of a transmitted RF signal by respiration have also shown to accurately estimate respiratory rate [1]. Work done by [7] shows that beyond link amplitudes and network-wide frequency estimates, there is also information to be gathered in the phase of the sinusoidal signal due to the person’s breathing, in particular for links which have a high amplitude. [8] shows that if the heartbeat and breathing signals are to be monitored, demodulating the phase will then give a signal that is proportional to the chest-wall position that contains information about movement due to heartbeat and respiration. 
 
 
 ## Techical Approach
@@ -150,11 +150,8 @@ In the single radio set up a pluto SDR was kept 45 cm from the users chest. This
 
 <p align="center">
 <img width="453" alt="Screenshot 2020-12-16 at 8 49 57 PM" src="https://user-images.githubusercontent.com/73725580/102446278-3fc58480-3fe2-11eb-8fe5-f76c114e2fc7.png">  
+Fig.7. Single Radio Set Up
 </p>
-
-<p align="center">
-Fig. 7. Single Radio Set Up
-</p>  
 
 In the two radio set up, an attempt was made to implement the concept of Fresnel zones. We refer to [4] for a brief explanation of Fresnel zones, and used this approach in out implementation. “Fresnel zones refer to the series of concentric ellipsoids of alternating strength that are caused by a light or radio wave following multiple paths as it propagates in free space, resulting in constructive and destructive interference as the different-length paths go in and out of phase. Assuming P1 and P2 are two radio transceivers (see Figure 1a), Fresnel zones are the concentric ellipsoids with foci in the pair of transceivers. For a given radio wavelength λ, Fresnel zones containing n ellipsoids can be constructed by ensuring that |P1Qn| + | QnP2| – | P1P2| = nλ/2 , where Qn is a point in the nth ellipse”
 
@@ -198,6 +195,14 @@ Settings. Retrieved December 08, 2020, from https://pubmed.ncbi.nlm.nih.gov/3078
 [3] Michler, Fabian, et al. "A clinically evaluated interferometric continuous-wave radar system for the contactless measurement of human vital parameters." Sensors 19.11 (2019): 2492.
 
 [4] Zhang, Daqing, Hao Wang, and Dan Wu. "Toward centimeter-scale human activity sensing with Wi-Fi signals." Computer 50.1 (2017): 48-57.
+
+[5] Dei, Devis, et al. "Non-contact detection of breathing using a microwave sensor." Sensors 9.4 (2009): 2574-2585.
+
+[6] Kaltiokallio, Ossi, et al. "Catch a breath: Non-invasive respiration rate monitoring via wireless communication." arXiv preprint arXiv:1307.0084 (2013).
+
+[7] Patwari, Neal, et al. "Monitoring breathing via signal strength in wireless networks." IEEE Transactions on Mobile Computing 13.8 (2013): 1774-1786.
+
+[8] Xiao, Yanming, et al. "Frequency-tuning technique for remote detection of heartbeat and respiration using low-power double-sideband transmission in the Ka-band." IEEE Transactions on Microwave Theory and Techniques 54.5 (2006): 2023-2032.
 
 
 
