@@ -15,18 +15,24 @@ Website URL:
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#technical-approach">Technical Approach</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#system-modelling">System Modelling</a></li>
+        <li><a href="#extracting-the-respiration-signal">Extracting the Respiration Signal</a></li>
+        <li><a href="#estimating-respiratory-rate">Estimating Respiratory Rate</a></li>   
+        <li><a href="#attempted-but-discontinued-approaches">Attempted but Discontinued Approaches</a></li> 
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li>
+      <a href="#evaluation">Evaluation</a>
+      <ul>
+        <li><a href="#experimental-setup">Experimental Setup</a></li>
+        <li><a href="#results">Results</a></li>
+      </ul>
+    </li>
+    <li><a href="#strengths-and-weaknesses">Strengths and Weaknesses</a></li>
+    <li><a href="#future-directions">Future Directions</a></li>
+    <li><a href="#references">References</a></li>
   </ol>
 </details>
 
@@ -188,29 +194,19 @@ We obtain a mean absolute error (MAE) of **0.11 bpm** using our estimation algor
 <img width="566" alt="Screenshot 2020-12-16 at 11 48 49 PM" src="https://user-images.githubusercontent.com/73725580/102458582-4f03fc80-3ff9-11eb-9da4-bd9272ae249d.png">
 </p> 
 
-## Strenghts and Weaknesses
-The single radio set up clearly delivered the best results. The experimental set up was clean, accirate and easy to repeate. From the results section it is easy to see that this implementation delivered accurate and reliable respritory rate mesurements. Our use of both FFT and peak detection offers innovative algorithm to determine the respiritory rates to a high degree of accuracy. On the other hand our baseline could have been done more professionally than simply counting breaths. We ordered a breathing belt to help take these measurements but due to a delay in the shipping we were not able to use it. Further our implementation of the fresnel zones was not as successful as we expected and did not deliver all of the benefits promised in the Zhang, wang, Wu 2017 paper. Overall we are very pleased with the promissing results of the our project and belive that our implentation is an elegant solution.
+## Strengths and Weaknesses
+
+The main strength of our experimental set up lies in its simplicity: it is clean, accurate and repeatable. Moreover, it provides a proof of concept for passive respiratory rate estimation using COTS radios. Our results indicate that our implementation delivered accurate and reliable respritory rate mesurements. Moreover, our combined use of both the FFT peak and peaksearch based methods managed to reduce the MAE in respiratory rate estimation. However, we still believe that our project can be further refined. 
+
+Our raw respiratory rates can be better estimated by respiration monitor belts, instead of manually counting the breaths per minute. Additonally, we believe that we can further improve our estimation accuracy by combining several other algorithms based on received signal strength, phase change, and by using multiple transmitters and receivers. We could then design an optimization function by providing varying weights to estimates obtained from each individual method. Another promising approach is by training an ML model based on phase/amplitude changes in IQ signal with varying carrier frequencies. This method was not followed due to our difficulty in generating labels for our training data. Further, our implementation of the Fresnel zones was not as successful as we expected, and did not deliver all of the benefits promised. We believe that incorporating some of these things can further improve our obtained results.
 
 ## Future Directions
-Future work on this project would be focused tailoring our promising results to specific applications. As mentioned previously there are numerous applications where our design could be used. We will discuss some uses in the market for the breathing rate monitor and how we may have to change our design to implement these solutions. 
 
-First, breathing rates are one of the conditions for COVID-19 patients to be taken off of a ventilator. If there
-breathing rate “remains above 35 breaths per minute for 5 minutes” or more then the cannot be removed from the ventilator footnote [2] . Our system would be able to monitor the breathing of the patient and tell the doctor if they can orcannot meet this requirement. Very little would have to be changed to implement our design though certification through the Federal Communications Commission (FCC) and FDA. Second, Athletes often monitor breathing as it is very important to tracking the progress and preformance during conditioning. It has been studied (footnote [3]) that the breathing rate is an important factor corelated to physical fitness. Here we would likely have to do some miniturization of the device to make it wearable though implemtation in its current form could be used inside a gym for certain sports. Finally, sleep can be monitored best by tracking breathing patterns(footnote [4]). Good sleep is essential to stay avoid mental issness and other health issues. Many wearable technologies are already trying to accomplish this. In conclusion we beleive there are many marketable applications for our device that would be valuable to many potential customers.
+Future work on this project could be focused on tailoring our results to specific applications. As mentioned previously there are numerous applications where our design could be used. We will discuss some uses in the market for the breathing rate monitor and how we may have to change our design to implement these solutions. 
 
-footnotes:
-[2] M. Khamiees, P., Nishimura, M., &amp; Y. Zhu, H. (1970, January 01). A comprehensive protocol
-for ventilator weaning and extubation: A prospective observational study. Retrieved
-December 08, 2020, from
-https://jintensivecare.biomedcentral.com/articles/10.1186/s40560-019-0402-4
+First, respiratory rates are one of the conditions for COVID-19 patients to be taken off of a ventilator. If there respiratory rate “remains above 35 breaths per minute for 5 minutes” or more then they cannot be removed from the ventilator footnote [9] . Our system would be able to monitor the breathing of the patient and tell the doctor if they can or cannot meet this requirement. Very little would have to be changed to implement our design through certification from the Federal Communications Commission (FCC) and FDA. Second, athletes often monitor breathing as it is very important to tracking the progress and preformance during conditioning. It has been studied  that the breathing rate is an important factor corelated to physical fitness [10]. Here, we would likely have to do some miniturization of the device to make it wearable though implemtation in its current form could be used inside a gym for certain sports. Finally, sleep can be monitored best by tracking breathing patterns [11]. Good sleep is essential to avoid mental illness and other health issues. Many wearable technologies are already trying to accomplish this, and our device can help with this aim. It could potentially also be used in detection of conditions such as sleep apnea. In conclusion, we believe that there are many marketable applications for our device that would be valuable to many potential customers.
 
-[3] Nicolò, A., Massaroni, C., &amp; Passfield, L. (2017). Respiratory Frequency during Exercise: The
-Neglected Physiological Measure. Frontiers in Physiology, 8.
-doi:10.3389/fphys.2017.00922
-
-[4]Cellini, M., &amp; Goldstone, A. (2019, July). Wearable Sleep Technology in Clinical and Research
-Settings. Retrieved December 08, 2020, from https://pubmed.ncbi.nlm.nih.gov/30789439/
-
-### References
+## References
 
 [1] Ravichandran, Ruth, et al. "WiBreathe: Estimating respiration rate using wireless signals in natural settings in the home." 2015 IEEE International Conference on Pervasive Computing and Communications (PerCom). IEEE, 2015.
 
@@ -228,6 +224,11 @@ Settings. Retrieved December 08, 2020, from https://pubmed.ncbi.nlm.nih.gov/3078
 
 [8] Xiao, Yanming, et al. "Frequency-tuning technique for remote detection of heartbeat and respiration using low-power double-sideband transmission in the Ka-band." IEEE Transactions on Microwave Theory and Techniques 54.5 (2006): 2023-2032.
 
+[9] Nitta, Kenichi, et al. "A comprehensive protocol for ventilator weaning and extubation: a prospective observational study." Journal of intensive care 7.1 (2019): 50.
+
+[10] Nicolò, Andrea, Carlo Massaroni, and Louis Passfield. "Respiratory frequency during exercise: the neglected physiological measure." Frontiers in physiology 8 (2017): 922.
+
+[11] De Zambotti, Massimiliano, et al. "Wearable sleep technology in clinical and research settings." Medicine and science in sports and exercise 51.7 (2019): 1538.
 
 
 
@@ -235,112 +236,3 @@ Settings. Retrieved December 08, 2020, from https://pubmed.ncbi.nlm.nih.gov/3078
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
