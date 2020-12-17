@@ -168,7 +168,7 @@ In the two radio set up, an attempt was made to replicate the concept of Freznel
 <img width="457" alt="Screenshot 2020-12-16 at 9 28 03 PM" src="https://user-images.githubusercontent.com/73725580/102447808-a4361300-3fe5-11eb-9472-b572b3f8429b.png">
 </p>  
 
-P<sub>1</sub> and P<sub>2</sub> are the loacation of the radio's and Q<sub>n</sub> represents a point on the ellipse. The first fresnel zone is the region inside the first ellipse. The subsequent Fresnel zones are the elliptical annuli between the confocal ellipsoids. Noting resuls from the paper, we tried our best to place our user in the middle of an inner Fresnel zone. A picture of our experimental setup is shown below. This approach was later abandoned due to the low strength of received signal and an increase in spurious reflections.
+P<sub>1</sub> and P<sub>2</sub> are the loacation of the radios and Q<sub>n</sub> represents a point on the ellipse. The first Freznel zone is the region inside the first ellipse. The subsequent Freznel zones are the elliptical annuli between the confocal ellipsoids. Noting resuls from the paper, we tried our best to place our user in the middle of an inner Fresnel zone. A picture of our experimental setup is shown below. This approach was later abandoned due to the low strength of received signal and an increase in spurious reflections.
 
 <p align="center">
 <img width="519" alt="Screenshot 2020-12-16 at 9 55 13 PM" src="https://user-images.githubusercontent.com/73725580/102449567-6cc96580-3fe9-11eb-857c-edc6b844c3f9.png">
