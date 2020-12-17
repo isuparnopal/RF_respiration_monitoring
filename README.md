@@ -145,11 +145,9 @@ Although this method seemed promising, it was discontinued due to problems of un
 ### Experimental Setup
 Experimental setup is a key portion of any scientific study. It is important to main a clean set up without and variations to ensure that all results are accurate and repeatable. In this investigation two different setups were used: single radio setup and two radio fresnal zone setup.
 
-In the single radio set up a pluto SDR was kept 45 cm from the users chest. Breathing is monitored via amplitude modulation as described in the Extracting the Respiration Signal section for a period of 30 seconds. Concurrently, the number of breaths that the user takes is counted manually. At the end the counted number of breaths and the respritory rate determined by our algorithm is compared to determine if we have accurately messured the respritory rate.
+In the single radio set up a pluto SDR was kept 45 cm from the users chest. This is meant to miror the use case in which monitiring happens passively as the user works on their laptop. Breathing is monitored via amplitude modulation as described in the Extracting the Respiration Signal section for a period of 30 seconds. Concurrently, the number of breaths that the user takes is counted manually. At the end the counted number of breaths and the respritory rate determined by our algorithm is compared to determine if we have accurately messured the respritory rate.
 
-In the two radio set up was an attempt to implement the Fresnel zones. We refer to footnote 1 for a brief explanation of fresnel zones, and used this approach in out implementation. 
-
-“Fresnel zones refer to the series of concentric ellipsoids of alternating strength that are caused by a light or radio wave following multiple paths as it propagates in free space, resulting in constructive and destructive interference as the different-length paths go in and out of phase. Assuming P1 and P2 are two radio transceivers (see Figure 1a), the Fresnel zones are the concentric ellipsoids with foci in the pair of transceivers. For a given radio wavelength λ, Fresnel zones containing n ellipsoids can be constructed by ensuring that |P1Qn| + | QnP2| – | P1P2| = nλ/2 , where Qn is a point in the nth ellipse”
+In the two radio set up was an attempt to implement the Fresnel zones. We refer to footnote 1 for a brief explanation of fresnel zones, and used this approach in out implementation. “Fresnel zones refer to the series of concentric ellipsoids of alternating strength that are caused by a light or radio wave following multiple paths as it propagates in free space, resulting in constructive and destructive interference as the different-length paths go in and out of phase. Assuming P1 and P2 are two radio transceivers (see Figure 1a), the Fresnel zones are the concentric ellipsoids with foci in the pair of transceivers. For a given radio wavelength λ, Fresnel zones containing n ellipsoids can be constructed by ensuring that |P1Qn| + | QnP2| – | P1P2| = nλ/2 , where Qn is a point in the nth ellipse”
 We implemented these fresnal zones with our two Pluto SDR, positioning them accordingly. 
 
 footnote [1] Zhang, D., Wang, H., & Wu, D. (2017). Toward Centimeter-Scale Human Activity Sensing with Wi-Fi Signals. Computer, 50(1), 48-57. doi:10.1109/mc.2017.7
@@ -160,15 +158,26 @@ footnote [1] Zhang, D., Wang, H., & Wu, D. (2017). Toward Centimeter-Scale Human
 
 
 ## Strenghts and Weaknesses
+The single radio set up clearly delivered the best results. The experimental set up was clean, accirate and easy to repeate. From the results section it is easy to see that this implementation delivered accurate and reliable respritory rate mesurements. Our use of both FFT and peak detection offers innovative algorithm to determine the respiritory rates to a high degree of accuracy. On the other hand our baseline could have been done more professionally than simply counting breaths. We ordered a breathing belt to help take these measurements but due to a delay in the shipping we were not able to use it. Further our implementation of the fresnel zones was not as successful as we expected and did not deliver all of the benefits promised in the Zhang, wang, Wu 2017 paper. Overall we are very pleased with the promissing results of the our project and belive that our implentation is an elegant solution.
 
 ## Future Directions
+Future work on this project would be focused tailoring our promising results to specific applications. As mentioned previously there are numerous applications where our design could be used. We will discuss some uses in the market for the breathing rate monitor and how we may have to change our design to implement these solutions. 
 
+First, breathing rates are one of the conditions for COVID-19 patients to be taken off of a ventilator. If there
+breathing rate “remains above 35 breaths per minute for 5 minutes” or more then the cannot be removed from the ventilator footnote [2] . Our system would be able to monitor the breathing of the patient and tell the doctor if they can orcannot meet this requirement. Very little would have to be changed to implement our design though certification through the Federal Communications Commission (FCC) and FDA. Second, Athletes often monitor breathing as it is very important to tracking the progress and preformance during conditioning. It has been studied (footnote [3]) that the breathing rate is an important factor corelated to physical fitness. Here we would likely have to do some miniturization of the device to make it wearable though implemtation in its current form could be used inside a gym for certain sports. Finally, sleep can be monitored best by tracking breathing patterns(footnote [4]). Good sleep is essential to stay avoid mental issness and other health issues. Many wearable technologies are already trying to accomplish this. In conclusion we beleive there are many marketable applications for our device that would be valuable to many potential customers.
 
+footnotes:
+[2] M. Khamiees, P., Nishimura, M., &amp; Y. Zhu, H. (1970, January 01). A comprehensive protocol
+for ventilator weaning and extubation: A prospective observational study. Retrieved
+December 08, 2020, from
+https://jintensivecare.biomedcentral.com/articles/10.1186/s40560-019-0402-4
 
+[3] Nicolò, A., Massaroni, C., &amp; Passfield, L. (2017). Respiratory Frequency during Exercise: The
+Neglected Physiological Measure. Frontiers in Physiology, 8.
+doi:10.3389/fphys.2017.00922
 
-
-
-
+[4]Cellini, M., &amp; Goldstone, A. (2019, July). Wearable Sleep Technology in Clinical and Research
+Settings. Retrieved December 08, 2020, from https://pubmed.ncbi.nlm.nih.gov/30789439/
 
 
 
