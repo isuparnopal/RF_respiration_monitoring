@@ -180,18 +180,13 @@ Using the experimental technique described above for a single radio set up, resp
 <img width="648" alt="Screenshot 2020-12-16 at 11 02 30 PM" src="https://user-images.githubusercontent.com/73725580/102454396-ceda9880-3ff2-11eb-998f-0aff9c410266.png">
 </p> 
 
-In the table above, counted BPM is the breaths per minute obtained by manual counting, the FFT peak breaths per minute is obtained by multiplying the peak frequency estimate from the FFT peak method by 60, and peak search BPM is the breaths per minute obtained by the peaksearch method described in the earlier section. Our final estimated respiratory rate is obtained by averaging the results from the FFT peak and peaksearch methods. The last column displays the absolue error in estimation using our algorithm. We obtain a mean absolute error (MAE) of **0.11 bpm** using our estimation algorithm. This is lower than an MAE of 0.24 bpm and 0.29 bpm obtained individually from the FFT peak method and peaksearch methods respectively. 
+In the table above, counted BPM is the breaths per minute obtained by manual counting, the FFT peak breaths per minute is obtained by multiplying the peak frequency estimate from the FFT peak method by 60, and peak search BPM is the breaths per minute obtained by the peaksearch method described in the earlier section. Our final estimated respiratory rate is obtained by averaging the results from the FFT peak and peaksearch methods. The last column displays the absolue error in estimation using our algorithm. 
 
+We obtain a mean absolute error (MAE) of **0.11 bpm** using our estimation algorithm. This is lower than an MAE of 0.24 bpm and 0.29 bpm obtained individually from the FFT peak method and peaksearch methods respectively. The absolute estimation errors using the various methods are visualized in the graph below. 
 
-
-
-
-
-
-
-
-
-
+<p align="center">
+<img width="566" alt="Screenshot 2020-12-16 at 11 48 49 PM" src="https://user-images.githubusercontent.com/73725580/102458582-4f03fc80-3ff9-11eb-9da4-bd9272ae249d.png">
+</p> 
 
 ## Strenghts and Weaknesses
 The single radio set up clearly delivered the best results. The experimental set up was clean, accirate and easy to repeate. From the results section it is easy to see that this implementation delivered accurate and reliable respritory rate mesurements. Our use of both FFT and peak detection offers innovative algorithm to determine the respiritory rates to a high degree of accuracy. On the other hand our baseline could have been done more professionally than simply counting breaths. We ordered a breathing belt to help take these measurements but due to a delay in the shipping we were not able to use it. Further our implementation of the fresnel zones was not as successful as we expected and did not deliver all of the benefits promised in the Zhang, wang, Wu 2017 paper. Overall we are very pleased with the promissing results of the our project and belive that our implentation is an elegant solution.
