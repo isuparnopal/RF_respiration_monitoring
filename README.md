@@ -147,6 +147,14 @@ Experimental setup is a key portion of any scientific study. It is important to 
 
 In the single radio set up a pluto SDR was kept 45 cm from the users chest. Breathing is monitored via amplitude modulation as described in the Extracting the Respiration Signal section for a period of 30 seconds. Concurrently, the number of breaths that the user takes is counted manually. At the end the counted number of breaths and the respritory rate determined by our algorithm is compared to determine if we have accurately messured the respritory rate.
 
+In the two radio set up was an attempt to implement the Fresnel zones. We refer to footnote 1 for a brief explanation of fresnel zones, and used this approach in out implementation. 
+
+“Fresnel zones refer to the series of concentric ellipsoids of alternating strength that are caused by a light or radio wave following multiple paths as it propagates in free space, resulting in constructive and destructive interference as the different-length paths go in and out of phase. Assuming P1 and P2 are two radio transceivers (see Figure 1a), the Fresnel zones are the concentric ellipsoids with foci in the pair of transceivers. For a given radio wavelength λ, Fresnel zones containing n ellipsoids can be constructed by ensuring that |P1Qn| + | QnP2| – | P1P2| = nλ/2 , where Qn is a point in the nth ellipse”
+We implemented these fresnal zones with our two Pluto SDR, positioning them accordingly. 
+
+footnote [1] Zhang, D., Wang, H., & Wu, D. (2017). Toward Centimeter-Scale Human Activity Sensing with Wi-Fi Signals. Computer, 50(1), 48-57. doi:10.1109/mc.2017.7
+
+
 
 ### Results
 
