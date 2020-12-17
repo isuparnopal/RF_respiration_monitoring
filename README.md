@@ -146,7 +146,7 @@ Although this method seemed promising, it was discontinued due to problems of un
 
 Our experiments are conducted with the Pluto SDR. The radio is configured to continuously transmit a message signal on a 2.4 GHz carrier. We set the baseband sampling rate to 1 Msps and use 5000 samples per frame. Our radio is connected to a computer to visualize the received baseband signal, and its envelope in real time. The post processing steps are performed after data collection. In our investigation, two different setups were explored: single radio setup and two radio Fresnel zone setup.
 
-In the single radio set up a pluto SDR was kept 45 cm from the users chest. This is meant to miror a use case in which respiration monitoring happens passively, multiple times a day, as the user works on their laptop. Each reading of respiratory rate is estimated using the algorithm described above by monitoring the user's breathing for a period of 30 seconds. Concurrently, the number of breaths that the user takes is counted manually. At the end, the counted number of breaths and the respritory rate determined by our algorithm is compared to determine if we have accurately messured the respritory rate. A picture of our experimental setup is shown below.
+In the single radio set up a pluto SDR was kept 45 cm from the users chest. This is meant to miror a use case in which respiration monitoring happens passively, multiple times a day, as the user works on their laptop. Each reading of respiratory rate is estimated using the algorithm described above by monitoring the user's breathing for a period of 30 seconds. Concurrently, the number of breaths that the user takes is counted manually. At the end, the counted number of breaths and the respritory rate determined by our algorithm is compared to determine if we have accurately messured the respiratory rate. A picture of our experimental setup is shown below.
 
 <p align="center">
 <img width="453" alt="Screenshot 2020-12-16 at 8 49 57 PM" src="https://user-images.githubusercontent.com/73725580/102446278-3fc58480-3fe2-11eb-8fe5-f76c114e2fc7.png">  
@@ -156,16 +156,22 @@ In the single radio set up a pluto SDR was kept 45 cm from the users chest. This
 Fig. 7. Single Radio Set Up
 </p>  
 
-In the two radio set up, an attempt was made to implement the concept of Fresnel zones. We refer to [4] for a brief explanation of Fresnel zones, and used this approach in out implementation. “Fresnel zones refer to the series of concentric ellipsoids of alternating strength that are caused by a light or radio wave following multiple paths as it propagates in free space, resulting in constructive and destructive interference as the different-length paths go in and out of phase. Assuming P1 and P2 are two radio transceivers (see Figure 1a), Fresnel zones are the concentric ellipsoids with foci in the pair of transceivers. For a given radio wavelength λ, Fresnel zones containing n ellipsoids can be constructed by ensuring that |P1Qn| + | QnP2| – | P1P2| = nλ/2 , where Qn is a point in the nth ellipse”
+In the two radio set up, an attempt was made to replicate the concept of Fresnel zones suggested in [4]. We placed two Pluto radios at a distance of appproximately 70cm apart, similar to the experiment suggested in the paper. Taking these two radio positions as our focii, concentric ellipses are approximately estimated using the formula from [4] shown below corresponding to our carrier wavelength of 12.5 cm (2.4 GHz).
 
-We implemented these Fresnel zones with our two Pluto SDR, positioning them accordingly. However, this approach was later abandoned due to an increase in spurious reflections, which didn't seem to improve estimation accuracy, even after using suitable filtering blocks in Simulink.
+<p align="center">
+<img width="457" alt="Screenshot 2020-12-16 at 9 28 03 PM" src="https://user-images.githubusercontent.com/73725580/102447808-a4361300-3fe5-11eb-9472-b572b3f8429b.png">
+</p>  
 
+P_1 and P_2 are the loacation of the radio's and Q_n represents a point on the ellipse. The first fresnel zone is the region inside the first ellipse. The subsequent Fresnel zones are the elliptical annuli between the confocal ellipsoids. Noting resuls from the paper, we tried our best to place our user in the middle of an inner Fresnel zone. A picture of our experimental setup is shown below.
 
+<p align="center">
+<img width="519" alt="Screenshot 2020-12-16 at 9 55 13 PM" src="https://user-images.githubusercontent.com/73725580/102449567-6cc96580-3fe9-11eb-857c-edc6b844c3f9.png">
+Fig. 8. Two Radio Set Up
+</p> 
 
-
+This approach was later abandoned due to the low strength of received signal and an increase in spurious reflections.
 
 ### Results
-
 
 ## Strenghts and Weaknesses
 The single radio set up clearly delivered the best results. The experimental set up was clean, accirate and easy to repeate. From the results section it is easy to see that this implementation delivered accurate and reliable respritory rate mesurements. Our use of both FFT and peak detection offers innovative algorithm to determine the respiritory rates to a high degree of accuracy. On the other hand our baseline could have been done more professionally than simply counting breaths. We ordered a breathing belt to help take these measurements but due to a delay in the shipping we were not able to use it. Further our implementation of the fresnel zones was not as successful as we expected and did not deliver all of the benefits promised in the Zhang, wang, Wu 2017 paper. Overall we are very pleased with the promissing results of the our project and belive that our implentation is an elegant solution.
