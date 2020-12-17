@@ -150,8 +150,11 @@ In the single radio set up a pluto SDR was kept 45 cm from the users chest. This
 
 <p align="center">
 <img width="453" alt="Screenshot 2020-12-16 at 8 49 57 PM" src="https://user-images.githubusercontent.com/73725580/102446278-3fc58480-3fe2-11eb-8fe5-f76c114e2fc7.png">  
-Fig.7. Single Radio Set Up
 </p>
+
+<p align="center">
+Fig. 7. Single Radio Set Up
+</p>  
 
 In the two radio set up, an attempt was made to implement the concept of Fresnel zones. We refer to [4] for a brief explanation of Fresnel zones, and used this approach in out implementation. “Fresnel zones refer to the series of concentric ellipsoids of alternating strength that are caused by a light or radio wave following multiple paths as it propagates in free space, resulting in constructive and destructive interference as the different-length paths go in and out of phase. Assuming P1 and P2 are two radio transceivers (see Figure 1a), Fresnel zones are the concentric ellipsoids with foci in the pair of transceivers. For a given radio wavelength λ, Fresnel zones containing n ellipsoids can be constructed by ensuring that |P1Qn| + | QnP2| – | P1P2| = nλ/2 , where Qn is a point in the nth ellipse”
 
