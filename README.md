@@ -143,14 +143,21 @@ Although this method seemed promising, it was discontinued due to problems of un
 ## Evaluation
 
 ### Experimental Setup
-Experimental setup is a key portion of any scientific study. It is important to main a clean set up without and variations to ensure that all results are accurate and repeatable. In this investigation two different setups were used: single radio setup and two radio fresnal zone setup.
 
-In the single radio set up a pluto SDR was kept 45 cm from the users chest. This is meant to miror the use case in which monitiring happens passively as the user works on their laptop. Breathing is monitored via amplitude modulation as described in the Extracting the Respiration Signal section for a period of 30 seconds. Concurrently, the number of breaths that the user takes is counted manually. At the end the counted number of breaths and the respritory rate determined by our algorithm is compared to determine if we have accurately messured the respritory rate.
+Our experiments are conducted with the Pluto SDR. The radio is configured to continuously transmit a message signal on a 2.4 GHz carrier. We set the baseband sampling rate to 1 Msps and use 5000 samples per frame. Our radio is connected to a computer to visualize the received baseband signal, and its envelope in real time. The post processing steps are performed after data collection. In our investigation, two different setups were explored: single radio setup and two radio Fresnel zone setup.
 
-In the two radio set up was an attempt to implement the Fresnel zones. We refer to footnote 1 for a brief explanation of fresnel zones, and used this approach in out implementation. “Fresnel zones refer to the series of concentric ellipsoids of alternating strength that are caused by a light or radio wave following multiple paths as it propagates in free space, resulting in constructive and destructive interference as the different-length paths go in and out of phase. Assuming P1 and P2 are two radio transceivers (see Figure 1a), the Fresnel zones are the concentric ellipsoids with foci in the pair of transceivers. For a given radio wavelength λ, Fresnel zones containing n ellipsoids can be constructed by ensuring that |P1Qn| + | QnP2| – | P1P2| = nλ/2 , where Qn is a point in the nth ellipse”
-We implemented these fresnal zones with our two Pluto SDR, positioning them accordingly. 
+In the single radio set up a pluto SDR was kept 45 cm from the users chest. This is meant to miror a use case in which respiration monitoring happens passively, multiple times a day, as the user works on their laptop. Each reading of respiratory rate is estimated using the algorithm described above by monitoring the user's breathing for a period of 30 seconds. Concurrently, the number of breaths that the user takes is counted manually. At the end, the counted number of breaths and the respritory rate determined by our algorithm is compared to determine if we have accurately messured the respritory rate. A picture of our experimental setup is shown below.
 
-footnote [1] Zhang, D., Wang, H., & Wu, D. (2017). Toward Centimeter-Scale Human Activity Sensing with Wi-Fi Signals. Computer, 50(1), 48-57. doi:10.1109/mc.2017.7
+<p align="center">
+<img width="453" alt="Screenshot 2020-12-16 at 8 49 57 PM" src="https://user-images.githubusercontent.com/73725580/102445427-51a62800-3fe0-11eb-9a42-dccb1cd1d593.png">
+Fig.7. Single Radio Set Up
+</p>
+
+In the two radio set up, an attempt was made to implement the concept of Fresnel zones. We refer to [4] for a brief explanation of Fresnel zones, and used this approach in out implementation. “Fresnel zones refer to the series of concentric ellipsoids of alternating strength that are caused by a light or radio wave following multiple paths as it propagates in free space, resulting in constructive and destructive interference as the different-length paths go in and out of phase. Assuming P1 and P2 are two radio transceivers (see Figure 1a), Fresnel zones are the concentric ellipsoids with foci in the pair of transceivers. For a given radio wavelength λ, Fresnel zones containing n ellipsoids can be constructed by ensuring that |P1Qn| + | QnP2| – | P1P2| = nλ/2 , where Qn is a point in the nth ellipse”
+
+We implemented these Fresnel zones with our two Pluto SDR, positioning them accordingly. However, this approach was later abandoned due to an increase in spurious reflections, which didn't seem to improve estimation accuracy, even after using suitable filtering blocks in Simulink.
+
+
 
 
 
@@ -178,6 +185,16 @@ doi:10.3389/fphys.2017.00922
 
 [4]Cellini, M., &amp; Goldstone, A. (2019, July). Wearable Sleep Technology in Clinical and Research
 Settings. Retrieved December 08, 2020, from https://pubmed.ncbi.nlm.nih.gov/30789439/
+
+### References
+
+[1] Ravichandran, Ruth, et al. "WiBreathe: Estimating respiration rate using wireless signals in natural settings in the home." 2015 IEEE International Conference on Pervasive Computing and Communications (PerCom). IEEE, 2015.
+
+[2] Zheng, Tianyue, et al. "V2iFi: in-Vehicle Vital Sign Monitoring via Compact RF Sensing." Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 4.2 (2020): 1-27.
+
+[3] Michler, Fabian, et al. "A clinically evaluated interferometric continuous-wave radar system for the contactless measurement of human vital parameters." Sensors 19.11 (2019): 2492.
+
+[4] Zhang, Daqing, Hao Wang, and Dan Wu. "Toward centimeter-scale human activity sensing with Wi-Fi signals." Computer 50.1 (2017): 48-57.
 
 
 
