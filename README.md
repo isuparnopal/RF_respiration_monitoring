@@ -149,7 +149,7 @@ Our experiments are conducted with the Pluto SDR. The radio is configured to con
 In the single radio set up a pluto SDR was kept 45 cm from the users chest. This is meant to miror a use case in which respiration monitoring happens passively, multiple times a day, as the user works on their laptop. Each reading of respiratory rate is estimated using the algorithm described above by monitoring the user's breathing for a period of 30 seconds. Concurrently, the number of breaths that the user takes is counted manually. At the end, the counted number of breaths and the respritory rate determined by our algorithm is compared to determine if we have accurately messured the respritory rate. A picture of our experimental setup is shown below.
 
 <p align="center">
-<img width="453" alt="Screenshot 2020-12-16 at 8 49 57 PM" src="https://user-images.githubusercontent.com/73725580/102446278-3fc58480-3fe2-11eb-8fe5-f76c114e2fc7.png">
+<img width="453" alt="Screenshot 2020-12-16 at 8 49 57 PM" src="https://user-images.githubusercontent.com/73725580/102446278-3fc58480-3fe2-11eb-8fe5-f76c114e2fc7.png">  
 Fig.7. Single Radio Set Up
 </p>
 
