@@ -1,7 +1,7 @@
 ## RF Based Respiration Monitoring
 
 UCLA ECE M202A Project, Fall 2020  
-Website URL:  
+Website URL: https://isuparnopal.github.io/RF_respiration_monitoring/
 
 <!-- TABLE OF CONTENTS -->
 
