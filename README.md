@@ -162,7 +162,7 @@ In the two radio set up, an attempt was made to replicate the concept of Fresnel
 <img width="457" alt="Screenshot 2020-12-16 at 9 28 03 PM" src="https://user-images.githubusercontent.com/73725580/102447808-a4361300-3fe5-11eb-9472-b572b3f8429b.png">
 </p>  
 
-P<sub>1</sub>t and P<sub>2</sub>t are the loacation of the radio's and Q<sub>n</sub>t represents a point on the ellipse. The first fresnel zone is the region inside the first ellipse. The subsequent Fresnel zones are the elliptical annuli between the confocal ellipsoids. Noting resuls from the paper, we tried our best to place our user in the middle of an inner Fresnel zone. A picture of our experimental setup is shown below. This approach was later abandoned due to the low strength of received signal and an increase in spurious reflections.
+P<sub>1</sub> and P<sub>2</sub> are the loacation of the radio's and Q<sub>n</sub> represents a point on the ellipse. The first fresnel zone is the region inside the first ellipse. The subsequent Fresnel zones are the elliptical annuli between the confocal ellipsoids. Noting resuls from the paper, we tried our best to place our user in the middle of an inner Fresnel zone. A picture of our experimental setup is shown below. This approach was later abandoned due to the low strength of received signal and an increase in spurious reflections.
 
 <p align="center">
 <img width="519" alt="Screenshot 2020-12-16 at 9 55 13 PM" src="https://user-images.githubusercontent.com/73725580/102449567-6cc96580-3fe9-11eb-857c-edc6b844c3f9.png">
@@ -180,7 +180,9 @@ Using the experimental technique described above for a single radio set up, resp
 <img width="648" alt="Screenshot 2020-12-16 at 11 02 30 PM" src="https://user-images.githubusercontent.com/73725580/102454396-ceda9880-3ff2-11eb-998f-0aff9c410266.png">
 </p> 
 
-In the table above, counted BPM is the breaths per minute obtained by manual counting, the FFT peak breaths per minute is obtained by multiplying the peak frequency from the FFT peak method by 60, and peak search BPM is the breaths per minute obtained by the peaksearch method described in the earlier section. Our final estimated respiratory rate is obtained by averaging the results from the FFT peak and peaksearch methods. The last column displays the absolue error in estimation using our algoirthm. 
+In the table above, counted BPM is the breaths per minute obtained by manual counting, the FFT peak breaths per minute is obtained by multiplying the peak frequency estimate from the FFT peak method by 60, and peak search BPM is the breaths per minute obtained by the peaksearch method described in the earlier section. Our final estimated respiratory rate is obtained by averaging the results from the FFT peak and peaksearch methods. The last column displays the absolue error in estimation using our algorithm. We obtain a mean absolute error (MAE) of **0.11 bpm** using our estimation algorithm. This is lower than an MAE of 0.24 bpm and 0.29 bpm obtained individually from the FFT peak method and peaksearch methods respectively. 
+
+
 
 
 
