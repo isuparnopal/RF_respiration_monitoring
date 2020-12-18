@@ -1,8 +1,12 @@
----
-layout: default
----
+<!-- ABOUT THE PROJECT -->
+## Overall Project Goals
 
-# DDIoTA
-Digital Distributed IoT Assistant
+### Abstract
 
-Project for ECE M202A Embedded Systems
+Respiratory rate (the number of breaths you take per minute) is an important physiological indicator of a person's health. It is regularly used in monitoring health conditions such as sleep apnea, chronic obstructive pulmonary disease and asthama. Additionally, in the current environment of COVID-19 - a respiratory virus infection, respiratory rate is one of the most important vital signs that is monitored in patients. Currently, there are well developed methods for monitoring respiratory rate in clinical settings, such as by using a respiratory chest band. However, these methods involve placing instruments on the body and do not lend themselves well to applications involving continous and non-invasive monitoring of respiratory rate. The purpose of this project is to demonstrate non-invasive and passive monitoring of respiratory rate using RF signals. By using a 2.4 GHz RF carrier signal generated on a Pluto SDR - which lies in the commercial WiFi frequency range, and a receiver, we study how transmitted message signals are modulated by a person's respiration and extract these respiration related features from the received baseband signal using filtering techniques. We develop a pipeline combining various signal processing approaches suggested in literature to estimate respiratory rate from these extracted features and finally, validate the accuracy of our measurements. 
+
+### Current Work
+
+The research community is currently focused on the use of two different techniques for vital signs detection by means of RF signals: continuous wave (CW) radars and ultra-wideband(UWB) radars. UWB radars transmit short pulses with pulse duration of the order of nanoseconds. These type of radars, as well as CW radars, are able to detect the movement of a target by measuring the low-Doppler variation that affects the received backscattered signal. UWB radars also provide a range resolution that permits to eliminate the interfering pulses due to reflections of other targets in the field of view. CW radars are more simple systems than the UWB radars and the receiver is independent of the target distance [5].  Work has been done by Kaltiokallio et al. to extract breathing with very low error over a single TX/RX link [6]. Similarly, microwave sensors used in the frequency range of 2.42 GHz detect the I and Q components of the backscattered field due to breathing when placed directly above the user’s chest at a distance of 1m.
+
+[7] shows experimentally that standard wireless networks which measure received signal strength (RSS) can also be used to reliably detect human breathing and estimate the respiratory rate. Additonally, techniques that exploit the amplitude modulation of a transmitted RF signal by respiration have also shown to accurately estimate respiratory rate [1]. Work done by [7] shows that beyond link amplitudes and network-wide frequency estimates, there is also information to be gathered in the phase of the sinusoidal signal due to the person’s breathing, in particular for links which have a high amplitude. [8] shows that if the heartbeat and breathing signals are to be monitored, demodulating the phase will then give a signal that is proportional to the chest-wall position that contains information about movement due to heartbeat and respiration. 
