@@ -2,10 +2,12 @@
 layout: default
 ---
 
-## Eugene Chu
-eugenechu@ucla.edu
+## Suparno Pal
+suparnopal@ucla.edu
 
-## Nicolas Cheng
-### UCLA HCI Lab
-nickycheng4@gmail.com
+## Chandan Kumar
+chandan550@gmail.com
+
+## Stephen Bauer
+bauersteffen705@gmail.com 
 
