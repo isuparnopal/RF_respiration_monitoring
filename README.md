@@ -233,12 +233,13 @@ First, respiratory rates are one of the conditions for COVID-19 patients to be t
 
 
 ## Individual Contributions
+Suparno Pal: I was the team leader. In this project I developed the expirmental set up and wrote the code for the FFt peak detection. I combined the code and was the main author of the new algorithm. I conducted the demo and aided in presentations. 
+
+Stephen Bauer: I helped set up the radios and debugged the software to make the radios operational. I wrote the code on the temporal peak detection using the findpeaks function in matlab which was used in the final algorithim. I also was the main author of the midterm report and one of the main authors for the final report. I  also studied the applications of our project.
 
 Chundan Kumar: I helped set up the radios and aided in the software set up. I coordinated meetings and team meetups. I used the VMD function and wrote code in matlab to contribute to our algorithm. I helped with presentations and recordings.
 
-Suparno Pal: I was the team leader. In this project I developed the expirmental set up and wrote the code for the FFt peak detection. I combined the code and was the main author of the new algorithm. I conducted the demo and aided in presentations. 
 
-Stephen Bauer: I helped set up the radios and debugged the software to make the radios operational. I wrote the code on the temporal peak detection using the findpeaks function in matlab which was used in the final algorithim. I also was the main author of the midterm report and one of the main authors for the final report. I  also studied the applications of our project. 
 
 
 
