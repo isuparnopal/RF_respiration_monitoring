@@ -52,7 +52,7 @@ The research community is currently focused on the use of two different techniqu
 [7] shows experimentally that standard wireless networks which measure received signal strength (RSS) can also be used to reliably detect human breathing and estimate the respiratory rate. Additonally, techniques that exploit the amplitude modulation of a transmitted RF signal by respiration have also shown to accurately estimate respiratory rate [1]. Work done by [7] shows that beyond link amplitudes and network-wide frequency estimates, there is also information to be gathered in the phase of the sinusoidal signal due to the person’s breathing, in particular for links which have a high amplitude. [8] shows that if the heartbeat and breathing signals are to be monitored, demodulating the phase will then give a signal that is proportional to the chest-wall position that contains information about movement due to heartbeat and respiration. 
 
 
-## Techical Approach
+## Technical Approach
 
 ### System Modelling
 
