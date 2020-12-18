@@ -1,5 +1,3 @@
 theme: jekyll-theme-cayman
 project:
-    name: DDIoTA
-    tagline: Digital Distributed IoT Assistant
-    github: https://github.com/EugeneCChu/DDIoTA
+    name: RF Respiration Monitoring
