@@ -2,9 +2,6 @@ theme: jekyll-theme-cayman
 title: RF Respiration Monitoring
 show_excerpts: false # set to true to show excerpts on the homepage
 
-header_pages:
- - about.md
-
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
