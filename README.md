@@ -2,11 +2,14 @@
 
 UCLA ECE M202A Project, Fall 2020  
 Website URL: https://isuparnopal.github.io/RF_respiration_monitoring/
+Final Presentation Video: https://youtu.be/GZq1B0qyP9w
+Demo Video: https://youtu.be/5J_PecgEZ40
 
 <!-- TABLE OF CONTENTS -->
 
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
+    <li><a href="#authors">Authors</a></li>
     <li>
       <a href="#Overall Project Goals">Overall Project Goals</a>
       <ul>
@@ -32,11 +35,15 @@ Website URL: https://isuparnopal.github.io/RF_respiration_monitoring/
     </li>
     <li><a href="#strengths-and-weaknesses">Strengths and Weaknesses</a></li>
     <li><a href="#future-directions">Future Directions</a></li>
+    <li><a href="#deliverables">Deliverables</a></li>
+    <li><a href="#individual-contributions">Individual Contributions</a></li>
     <li><a href="#references">References</a></li>
   </ol>
 
-
-
+## Authors
+- Suparno Pal
+- Stephen Bauer
+- Chandan Kumar
 
 <!-- ABOUT THE PROJECT -->
 ## Overall Project Goals
@@ -207,6 +214,17 @@ Future work on this project could be focused on tailoring our results to specifi
 
 First, respiratory rates are one of the conditions for COVID-19 patients to be taken off of a ventilator. If a patient's respiratory rate “remains above 35 breaths per minute for 5 minutes” or more then they cannot be removed from the ventilator [9] . Our system would be able to monitor the breathing of the patient and tell the doctor if they can or cannot meet this requirement. Very little would have to be changed to implement our design through certification from the Federal Communications Commission (FCC) and FDA. Second, athletes often monitor breathing as it is very important to tracking the progress and performance during conditioning. It has been studied  that the breathing rate is an important factor corelated to physical fitness [10]. Here, we would likely have to do some miniturization of the device to make it wearable, though implemtation in its current form could be used inside a gym for certain sports. Finally, sleep can be monitored best by tracking breathing patterns [11]. Good sleep is essential to avoid mental illness and other health issues. Many wearable technologies are already trying to accomplish this, and our device can help with this aim. It could also potentially be used in detection of conditions such as sleep apnea. In conclusion, we believe that there are many marketable applications for our device that would be valuable to many potential customers.
 
+## Deliverables
+
+- Simulink workspace for extracting respiration envelope
+- Signal processing scripts in MATLAB
+
+## Individual Contributions
+
+- Suparno Pal: Signal processing block development, algorithm and pipeline development, experimental results, presentation and demo
+- Stephen Bauer: Radio setup and debugging the software to make radios operational, temporal peak detection, main author of the midterm report, applications and future direction, experimental results
+- Chandan Kumar: set up the radios and aided in the software set up, VMD algorithm review and comparison, presentation and recording, experimental results
+
 ## References
 
 [1] Ravichandran, Ruth, et al. "WiBreathe: Estimating respiration rate using wireless signals in natural settings in the home." 2015 IEEE International Conference on Pervasive Computing and Communications (PerCom). IEEE, 2015.
@@ -231,13 +249,6 @@ First, respiratory rates are one of the conditions for COVID-19 patients to be t
 
 [11] De Zambotti, Massimiliano, et al. "Wearable sleep technology in clinical and research settings." Medicine and science in sports and exercise 51.7 (2019): 1538.
 
-
-## Individual Contributions
-Suparno Pal: I was the team leader. In this project I developed the expirmental set up and wrote the code for the FFt peak detection. I combined the code and was the main author of the new algorithm. I conducted the demo and aided in presentations. 
-
-Stephen Bauer: I helped set up the radios and debugged the software to make the radios operational. I wrote the code on the temporal peak detection using the findpeaks function in matlab which was used in the final algorithim. I also was the main author of the midterm report and one of the main authors for the final report. I  also studied the applications of our project.
-
-Chundan Kumar: I helped set up the radios and aided in the software set up. I coordinated meetings and team meetups. I used the VMD function and wrote code in matlab to contribute to our algorithm. I helped with presentations and recordings.
 
 
 
