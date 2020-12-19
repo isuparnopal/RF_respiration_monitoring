@@ -1,9 +1,9 @@
 ## RF Based Respiration Monitoring
 
 UCLA ECE M202A Project, Fall 2020  
-Website URL: https://isuparnopal.github.io/RF_respiration_monitoring/
-Final Presentation Video: https://youtu.be/GZq1B0qyP9w
-Demo Video: https://youtu.be/5J_PecgEZ40
+Website URL: https://isuparnopal.github.io/RF_respiration_monitoring/ 
+Final Presentation Video: https://youtu.be/GZq1B0qyP9w  
+Demo Video: https://youtu.be/5J_PecgEZ40 
 
 <!-- TABLE OF CONTENTS -->
 
@@ -221,8 +221,8 @@ First, respiratory rates are one of the conditions for COVID-19 patients to be t
 
 ## Individual Contributions
 
-- Suparno Pal: Signal processing block development, algorithm and pipeline development, experimental results, presentation and demo
-- Stephen Bauer: Radio setup and debugging the software to make radios operational, temporal peak detection, main author of the midterm report, applications and future direction, experimental results
+- Suparno Pal: signal processing block development in Simulink, algorithm and pipeline development, experimental results, presentation and demo
+- Stephen Bauer: radio setup and debugging the software to make radios operational, temporal peak detection, main author of the midterm report, applications and future direction, experimental results
 - Chandan Kumar: set up the radios and aided in the software set up, VMD algorithm review and comparison, presentation and recording, experimental results
 
 ## References
